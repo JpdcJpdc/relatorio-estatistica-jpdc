@@ -1,9 +1,7 @@
 ---
-title: "Ben Dêivide"
-image: "avatar.png"
+title: "Jp Dc"
+image: "logo.png"
 links:
-  - label: Lattes
-    url: http://lattes.cnpq.br/4118572120481367
   - label: GitHub
     url: "https://github.com/"
   - label: Email
@@ -14,4 +12,4 @@ output:
   postcards::jolla
 ---
  
-Texto ....
+Hello There!
