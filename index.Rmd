@@ -1,5 +1,5 @@
 ---
-title: "Jp Dc"
+title: "João Pedro Delpasso"
 image: "logo.png"
 links:
   - label: GitHub
@@ -14,4 +14,5 @@ output:
   postcards::jolla
 ---
  
-Hello There!
+Página dedicada a apresentação pessoal, e a divulgação dos relatórios da disciplina de Estatística e Probabilidade.
+Ainda em construção :)
