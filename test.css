@@ -1,0 +1,218 @@
+:root {
+    --primary-hue: 210;
+    --theme-color: hsl(var(--primary-hue), 80%, 60%);
+    --theme-color-secondary: hsl(calc(var(--primary-hue) + 30), 80%, 60%);
+    --bg-color: #050505;
+    --text-primary: #e2e8f0;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+#canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.ui-layer {
+    position: absolute;
+    z-index: 10;
+}
+
+#toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+#physics-toggle {
+    font-family: inherit; 
+    font-size: 1rem;
+}
+
+.acrylic-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    box-sizing: border-box; 
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: none; 
+    border-radius: 0; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    padding: 40px;
+}
+
+.logo-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-wrapper::before {
+    content: '';
+    position: absolute;
+    width: 256px; 
+    height: 256px;
+    border-radius: 50%;
+    background-color: var(--theme-color-secondary); 
+    filter: blur(64px); 
+    z-index: -1;
+    opacity: 1;
+    animation: pulseGlow 4s infinite alternate ease-in-out;
+}
+
+@keyframes pulseGlow {
+    0% { transform: scale(0.9); opacity: 0.5; }
+    100% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.background-svg {
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    max-width: 800px; 
+    max-height: 800px;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.scales-svg {
+    width: 512px;
+    height: 512px;
+    z-index: 3;
+    pointer-events: none;
+    -webkit-mask-image: radial-gradient(circle 128px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    mask-image: radial-gradient(circle 128px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+}
+
+.content-card {
+    background: rgba(0, 0, 0, 0); 
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    z-index: 5;
+}
+
+.logo-wrapper:hover .scales-svg {
+    opacity: 0.6; 
+}
+
+#profile-logo {
+    width: 512px;
+    height: 512px;
+    background-color: transparent;
+    object-fit: cover;
+    z-index: 1;
+    max-width: 90vw; 
+}
+
+.links-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.dynamic-button {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--text-primary);
+    background-color: transparent;
+    border: 2px solid var(--theme-color);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s, color 0.2s, transform 0.1s;
+}
+
+.dynamic-button i {
+    margin-right: 8px; 
+}
+
+.dynamic-button:hover {
+    background-color: var(--theme-color-secondary);
+    border-color: var(--theme-color-secondary);
+    color: var(--bg-color);
+}
+
+.physics-enabled {
+    position: absolute !important;
+    margin: 0 !important;
+    top: 0 !important;
+    left: 0 !important;
+    transition: none !important; 
+    z-index: 100 !important;
+    pointer-events: auto !important;
+}
+
+#grid-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    pointer-events: none; 
+}
+
+@media (max-width: 768px) {
+    .acrylic-panel {
+        padding: 24px;
+    }
+
+    .content-card {
+        padding: 24px 16px;
+        width: 90%; 
+        max-width: 400px;
+    }
+
+    #name-tag {
+        font-size: 1.8rem;
+        margin-bottom: 5px;
+    }
+
+    #description {
+        font-size: 1rem;
+        white-space: normal;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    .links-container {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .links-container .dynamic-button {
+        width: 60%;
+        margin: 0 auto;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}

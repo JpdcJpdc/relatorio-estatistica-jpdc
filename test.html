@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jpdc</title>
+    <link rel="stylesheet" href="test.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+ 
+</head>
+<body>
+    <div id="canvas-container"></div>
+    
+    <div class="acrylic-panel ui-layer" id="main-panel">
+        <canvas id="grid-canvas"></canvas>
+        
+        <div class="logo-wrapper static-element">
+            <img src="scales.svg" alt="Blueprint Scales" class="background-svg scales-svg">
+            <img src="jp.svg" alt="Logo" id="profile-logo">
+        </div>
+        
+        <div class="content-card static-element" id="ui-card">
+            <h1 class="physics-element" id="name-tag">Big Scary Name</h1>
+            <p class="physics-element" id="description">Hi there this is a really long description that spans multiple lines and showcases this whole thing.</p>
+            
+            <div class="links-container physics-element" id="links-box">
+                <a href="https://github.com/JpdcJpdc" class="dynamic-button"><i class="fa-brands fa-github"></i>GitHub</a>
+                <a href="https://jpdc.itch.io/" class="dynamic-button"><i class="fa-brands fa-itch-io"></i>Itch.io</a>
+                <a href="mailto:joao_delpasso@hotmail.com" class="dynamic-button"><i class="fa-solid fa-envelope"></i>Email</a>
+                <a href="./relatorio/index.html" class="dynamic-button"><i class="fa-solid fa-file-lines"></i>Relatórios</a>
+            </div>
+        </div>
+
+        <div id="toggle-container" class="ui-layer">
+            <button id="physics-toggle" class="dynamic-button">fun :)</button>
+        </div>
+    </div>
+
+    <script src="test.js"></script>
+</body>
+</html>
