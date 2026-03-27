@@ -22,7 +22,7 @@ const render = Render.create({
 
 const lights = [];
 const hardwareCores = navigator.hardwareConcurrency || 4;
-const numLights = hardwareCores <= 4 ? 6 : 16;
+const numLights = hardwareCores <= 2 ? 6 : 16;
 const centerX = window.innerWidth / 2;
 const centerY = window.innerHeight / 2;
 
