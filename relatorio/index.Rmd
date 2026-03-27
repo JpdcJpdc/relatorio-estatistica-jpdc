@@ -1,6 +1,6 @@
 ---
 title: "Relatórios da Disciplina Estatística Experimental (UFSJ)"
-author: "[igor Pereira](https://bendeivide.github.io) | [DEFIM/UFSJ](https://ufsj.edu.br)"
+author: "[João Delpasso](https://jpdcjpdc.github.io/relatorio-estatistica-jpdc/) | [DEFIM/UFSJ](https://ufsj.edu.br)"
 date: "`r format(Sys.time(), '%d %B, %Y, %Hh:%Mmin:%Sseg')`"
 toc-title: "Sumário"
 output:
@@ -27,7 +27,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Mais informações sobre mim
 
-Acesse: [Nome do Aluno](info/index.html){target="_blank"}
+Acesse: [João Delpasso](index.html){target="_blank"}
 
 # Página dos alunos da disciplina
 

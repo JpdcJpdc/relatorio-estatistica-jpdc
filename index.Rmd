@@ -3,9 +3,11 @@ title: "Jp Dc"
 image: "logo.png"
 links:
   - label: GitHub
-    url: "https://github.com/"
+    url: "https://github.com/JpdcJpdc"
+  - label: Itch.io
+    url: "https://jpdc.itch.io/"
   - label: Email
-    url: "mailto:name@gmail.com"
+    url: "mailto:joao_delpasso@hotmail.com"
   - label: Relatórios
     url: "./relatorio/index.html"
 output:
