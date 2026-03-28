@@ -21,7 +21,8 @@ const render = Render.create({
 });
 
 const lights = [];
-const numLights = 16;
+const hardwareCores = navigator.hardwareConcurrency || 4;
+const numLights = hardwareCores <= 2 ? 6 : 16;
 const centerX = window.innerWidth / 2;
 const centerY = window.innerHeight / 2;
 
@@ -197,7 +198,19 @@ function syncDOMToPhysics() {
 window.addEventListener('resize', () => {
     render.canvas.width = window.innerWidth;
     render.canvas.height = window.innerHeight;
+    cacheRectangles();
 });
+
+let cachedUIRects = {};
+
+function cacheRectangles() {
+    const ids = ['profile-logo', 'physics-toggle', 'ui-card'];
+    ids.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) cachedUIRects[id] = el.getBoundingClientRect();
+    });
+}
+cacheRectangles();
 
 document.getElementById('physics-toggle').addEventListener('click', () => {
     if (physicsActive) {
@@ -340,12 +353,12 @@ function renderInteractiveGrid() {
         gCtx.fill();
     }
 
-    const logoEl = document.getElementById('profile-logo');
-    if (logoEl) {
-        const rect = logoEl.getBoundingClientRect();
-        drawLens(rect.left + rect.width / 2, rect.top + rect.height / 2, 256, 0.8);
+    if (cachedUIRects['profile-logo']) {
+        const rect = cachedUIRects['profile-logo'];
+        drawLens(rect.left + rect.width / 2, rect.top + rect.height / 2, rect.width * 0.5, 0.8);
     }
 
+    
     drawLens(mouseX, mouseY, 64, 0.4);
     
     const toggleBtn = document.getElementById('physics-toggle');

@@ -66,6 +66,8 @@ body, html {
 }
 
 .logo-wrapper {
+    width: 40vmin;
+    height: 40vmin;
     position: relative;
     display: flex;
     justify-content: center;
@@ -101,8 +103,8 @@ body, html {
 }
 
 .scales-svg {
-    width: 512px;
-    height: 512px;
+    width: 60vmin;
+    height: 60vmin;
     z-index: 3;
     pointer-events: none;
     -webkit-mask-image: radial-gradient(circle 128px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
@@ -124,8 +126,8 @@ body, html {
 }
 
 #profile-logo {
-    width: 512px;
-    height: 512px;
+    width: 60vmin;
+    height: 60vmin;
     background-color: transparent;
     object-fit: cover;
     z-index: 1;
