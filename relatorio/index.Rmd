@@ -1,6 +1,6 @@
 ---
 title: "Relatórios da Disciplina Estatística Experimental (UFSJ)"
-author: "[João Delpasso](https://jpdcjpdc.github.io/relatorio-estatistica-jpdc/) | [DEFIM/UFSJ](https://ufsj.edu.br)"
+author: "[Ben Dêivide](https://bendeivide.github.io) | [DEFIM/UFSJ](https://ufsj.edu.br)"
 date: "`r format(Sys.time(), '%d %B, %Y, %Hh:%Mmin:%Sseg')`"
 toc-title: "Sumário"
 output:
@@ -31,7 +31,7 @@ Acesse: [João Delpasso](index.html){target="_blank"}
 
 # Página dos alunos da disciplina
 
-- Acesse: [Página dos alunos da disciplina Estatística e probabilidade](https://bendeivide.github.io/courses/estexp/estexp2025.1/#relat%C3%B3rio-dos-alunos){target="_blank"}
+- Acesse: [Página dos alunos da disciplina Estatística e probabilidade](https://bendeivide.github.io/courses/epaec/normal2026.1/#relat%C3%B3rio-dos-alunos){target="_blank"}
 
 # Visão geral sobre os relatórios {.tabset .tabset-fade}
 
@@ -165,7 +165,7 @@ Para *linkar* os relatórios basta usar o código (Exemplo Relatório 01):
 ```
 Relatórios desenvolvidos:
 
-- [Relatório 01 (XX/XX/XXXX)](rel01/index.html){target="_blank"}
+- [Relatório 01 (30/03/2026)](rel01/index.html){target="_blank"}
 - [Relatório 02 (XX/XX/XXXX)](rel02/index.html){target="_blank"}
 - [Relatório 03 (XX/XX/XXXX)](rel03/index.html){target="_blank"}
 - [Relatório 04 (XX/XX/XXXX)](rel04/index.html){target="_blank"}

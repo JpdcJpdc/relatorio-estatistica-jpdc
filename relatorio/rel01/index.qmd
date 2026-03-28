@@ -26,19 +26,18 @@ execute:
 ---
 
 
-## 📌 Introdução
+## Introdução
 
-Descreva o contexto da prática e sua importância.
+No contexto do ensino de Estatística e Probabilidade, a predominância de modelos puramente teóricos pode resultar em uma lacuna pedagógica, dificultando a conexão entre a abstração conceitual e a aplicabilidade prática. A implementação de estratégias de avaliação autêntica, por meio de experimentos práticos que permitem aos estudantes a coleta de dados gerados pelos próprios alunos (SGD), mitiga essa desconexão ao transformar o aprendizado em um processo investigativo real. Segundo @Conlon22092025, essa abordagem não apenas amplia o engajamento e a 'propriedade psicológica' sobre o conteúdo, mas também reduz a carga cognitiva ao permitir que os alunos utilizem sua intuição sobre o experimento para dominar técnicas complexas de análise e inferência.
 
-> Exemplo: análise da variabilidade em experimentos físicos utilizando uma catapulta.
+Para esse modelo misto de aula teórica e prática, será utilizado um modelo de catapulta, um experimento clássico de física que pode ser facilmente adaptado para a coleta de dados para uso na disciplina de Estatística e Probabilidade. Através dos dados coletados, serão aplicados conceitos estudados, como média, variância, desvio padrão, gráficos e interpretação de resultados. Proporcionando uma experiência de aprendizado mais rica e significativa, onde os alunos possam ver a relevância dos conceitos estatísticos na análise de dados reais.
 
 
-
-## 🎯 Objetivos
+## Objetivos
 
 ### Objetivo geral
 
-Descrever o objetivo principal da prática.
+Gerar dados experimentais a partir de um modelo de catapulta para aplicar conceitos de estatística descritiva e interpretação de resultados.
 
 ### Objetivos específicos
 
@@ -49,78 +48,130 @@ Descrever o objetivo principal da prática.
 
 ---
 
-## 📚  Fundamentação Teórica
+## Fundamentação Teórica
 
-Apresente os conceitos principais:
+Para a análise dos dados coletados será feito um estudo com base no livro de estatística, @EstaProb2024, serão aplicados os seguintes conceitos:
 
 - Média
+
+  Valor que representa o centro de um conjunto de dados, calculado pela soma dos valores dividida pelo número de observações. A média é sensível a valores extremos (outliers) e pode não representar adequadamente a tendência central em distribuições assimétricas.
+  A média é calculada pela equação:
+  $$\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i$${#eq-media}
+
 - Variância
+
+  Essa medida indica o grau de dispersão dos dados em relação à média, ou seja o quanto os valores se afastam da média. A variância pode ser calculada com:
+
+  $$s^2 = \frac{1}{n-1}\sum_{i=1}^{n} (x_i - \bar{x})^2$${#eq-variancia}
+
 - Desvio padrão
+
+  Para facilitar a interpretação da variabilidade dos dados, o desvio padrão é utilizado, sendo a raiz quadrada da variância. Ele é expresso na mesma unidade dos dados originais, o que facilita a compreensão da dispersão em relação à média. O desvio padrão é calculado por:
+
+$$s = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n} (x_i - \bar{x})^2}$${#eq-desvio-padrao}
+
 - Amostragem
 
-$$
-\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i
-$$
+  A amostragem é o processo de selecionar um subconjunto representativo de uma população para análise. Existem diferentes métodos de amostragem, como a amostragem aleatória simples, estratificada e sistemática, cada um com suas vantagens e desvantagens. A escolha do método de amostragem pode influenciar a validade dos resultados e a generalização das conclusões.
+
 
 ---
 
-## ⚙️ Metodologia
+## Metodologia
 
-::: {.callout-note}
-Descreva como o experimento foi realizado.
-:::
+- Materiais utilizados:
+  - Catapulta configurável
+  - Bola de pingue-pongue
+  - Fita métrica
 
-- Materiais utilizados  
-- Procedimento  
-- Número de repetições  
+- Procedimento:
+  1. Configuração inicial da catapulta, ajustando a altura do cesto (O-), o ângulo máximo de lançamento(B+), fixação do elástico no braço(A+) e a fixação do elástico na base(A-).
+      - No experimento realizado, a configuração utilizada foi: O- = nível 2, B+ = 90°, A+ = nível 3 e A- = nível 4.
+  2. Fixação da catapulta em uma superfície estável para garantir a consistência dos lançamentos.
+
+  3. Realização de $n$ lançamentos, mensurando a distância em que o projetil atinge o chão.
+      - No experimento em sala de aula com todos estudantes presentes, foram realizados $n = 22$ lançamentos.
+
+  4. Registro dos dados coletados em uma tabela.
+
+  5. Análise e interpretação dos dados utilizando os conceitos de estatística.
 
 ---
 
-## 🔍 Resultados e Discussão
+## Resultados e Discussão
 
-Apresente e interprete os resultados obtidos a partir dos dados coletados.
-
-- Descreva os principais resultados numéricos (média, variabilidade, etc.).
-- Comente o comportamento dos dados observados nos gráficos.
-- Indique se há presença de valores discrepantes (outliers).
-- Avalie se os dados apresentam simetria ou tendência.
-
-Em seguida, discuta os resultados à luz dos conceitos teóricos:
-
-- Os resultados estão de acordo com o esperado?
-- Há grande variabilidade? O que isso significa no contexto do experimento?
-- Quais fatores podem ter influenciado os resultados?
-- Existem possíveis fontes de erro experimental?
-
-Procure não apenas descrever, mas **interpretar os dados**.
-
-### 💬 Exemplo de como citar uma referência bibliográfica
-
-Depois de inserido as informaçõe no arquivo **referencias.bib**, use:
-
-- Segundo @Rbasico2022
-- Tudo é um objeto em R [@Rbasico2022]
-
-### 📊  Análise de Dados
+Após a coleta dos dados, foram obtidos os seguintes resultados (em cm):
 
 ```{r}
-distancia <- c(10.2, 9.8, 10.5, 10.1, 9.9, 10.3)
-distancia
+library(leem)
+
+ap01 <- read.csv2("ap01.csv")
+
+dbrutos <- ap01$dist
+
+drol <- sort(dbrutos)
+
+aux <- new_leem(x = drol, variable = 2)
+aux
 ```
 
-## 🧠 Considerações finais
+Utilizando o pacote `leem` que integra as equações, @eq-media, @eq-variancia e @eq-desvio-padrao, no R, os dados podem ser facilmente organizados e analisados:
 
-Apresente uma síntese dos principais pontos observados no experimento.
+```{r}
+tab <- tabfreq(aux, k = 3)
+tab
+```
 
-- Retome o objetivo da prática e indique se ele foi alcançado.
-- Destaque os principais aprendizados obtidos.
-- Comente brevemente sobre a qualidade dos dados coletados.
-- Sugira possíveis melhorias no procedimento experimental.
+Os dados também podem ser visualizados graficamente:
+```{r}
+barplot(tab)
+```
 
-Evite repetir apenas os resultados; foque nas **conclusões e reflexões** sobre a prática realizada.
+Os valores de média, variância e desvio padrão calculados a partir dos dados coletados foram:
+- Média:
+```{r}
+media <- mean(dbrutos)
+media
+```
+- Variância:
+```{r}
+variancia <- var(dbrutos)
+variancia
+```
+- Desvio Padrão:
+```{r}
+desvio_padrao <- sd(dbrutos)
+desvio_padrao
+```
 
-## Aprenda Quarto
+- Discussão dos resultados
 
-Acesse [Quarto](https://quarto.org/).
+  Os resultados obtidos a partir dos dados coletados indicam que a média das distâncias alcançadas pelos lançamentos da catapulta foi de aproximadamente `r round(media, 2)` cm, com uma variabilidade expressa pela variância de `r round(variancia, 2)` cm² e um desvio padrão de `r round(desvio_padrao, 2)` cm.
 
-## 📖 Referências
+  Estes valores sugerem que, embora a média seja um indicador do desempenho geral da catapulta, a variabilidade dos lançamentos é significativa, indicando que os resultados podem variar consideravelmente de um lançamento para outro. Existe um valor que está significativamente distante da média, o que pode ser considerado um outlier. A presença de outliers pode indicar a ocorrência de erros experimentais ou condições atípicas durante o lançamento.
+
+  Se removido o valor discrepante de $326.0$ cm e recalculado tudo, os resultados são:
+
+```{r}
+dbrutos_sem_outlier <- dbrutos[dbrutos != 326.0]
+
+aux2 <- new_leem(x = sort(dbrutos_sem_outlier), variable = 2)
+
+tab2 <- tabfreq(aux2, k = 3)
+tab2
+barplot(tab2)
+```
+
+Com a remoção do outlier, a média diminui para `r round(mean(dbrutos_sem_outlier), 2)` cm, a variância reduz para `r round(var(dbrutos_sem_outlier), 2)` cm² e o desvio padrão cai para `r round(sd(dbrutos_sem_outlier), 2)` cm. Isso indica que o outlier tinha um impacto significativo na análise dos dados, distorcendo a percepção do desempenho da catapulta.
+
+Os histogramas ajudam a visualizar a distribuição dos dados, mostrando que a maioria dos lançamentos se concentra em torno da média, mas a presença do outlier cria uma cauda longa à direita, indicando que houve um lançamento excepcionalmente distante.
+
+## Considerações finais
+
+O experimento realizado com a catapulta permitiu a aplicação prática dos conceitos de estatística descritiva, como média, variância e desvio padrão, a partir dos dados coletados. A análise dos resultados revelou a presença de um outlier que influenciou significativamente as medidas de tendência central e dispersão, destacando a importância de identificar e lidar com valores atípicos em conjuntos de dados.
+
+Este valor discrepante pode ter sido resultado de um erro experimental, como um lançamento mal executado ou uma falha na medição, o que ressalta a necessidade de rigor e atenção durante a coleta de dados. A remoção do outlier proporcionou uma visão mais precisa do desempenho da catapulta, evidenciando a importância de considerar a qualidade dos dados ao interpretar os resultados.
+
+Uma análise física do modelo da catapulta poderia também junto aos dados coletados, fornecer variáveis físicas do modelo, como a força de lançamento, altura máxima e vários outros parametros, o que poderia enriquecer ainda mais a análise dos dados e a compreensão do experimento, permitindo uma abordagem mais interdisciplinar entre física e estatística.
+
+## Referências
