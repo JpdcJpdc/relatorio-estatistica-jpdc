@@ -185,7 +185,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Data de Publicação</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">28/03/2026, 15:55</p>
+      <p class="date">29/03/2026, 11:19</p>
     </div>
   </div>
   
@@ -199,8 +199,8 @@ window.Quarto = {
 
 <section id="introdução" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="introdução"><span class="header-section-number">1</span> Introdução</h2>
-<p>No contexto do ensino de Estatística e Probabilidade, a predominância de modelos puramente teóricos pode resultar em uma lacuna pedagógica, dificultando a conexão entre a abstração conceitual e a aplicabilidade prática. A implementação de estratégias de avaliação autêntica, por meio de experimentos práticos que permitem aos estudantes a coleta de dados gerados pelos próprios alunos (SGD), mitiga essa desconexão ao transformar o aprendizado em um processo investigativo real. Segundo <span class="citation" data-cites="Conlon22092025">Conlon e Wilson (<a href="#ref-Conlon22092025" role="doc-biblioref">2025</a>)</span>, essa abordagem não apenas amplia o engajamento e a ‘propriedade psicológica’ sobre o conteúdo, mas também reduz a carga cognitiva ao permitir que os alunos utilizem sua intuição sobre o experimento para dominar técnicas complexas de análise e inferência.</p>
-<p>Para esse modelo misto de aula teórica e prática, será utilizado um modelo de catapulta, um experimento clássico de física que pode ser facilmente adaptado para a coleta de dados para uso na disciplina de Estatística e Probabilidade. Através dos dados coletados, serão aplicados conceitos estudados, como média, variância, desvio padrão, gráficos e interpretação de resultados. Proporcionando uma experiência de aprendizado mais rica e significativa, onde os alunos possam ver a relevância dos conceitos estatísticos na análise de dados reais.</p>
+<p>No contexto do ensino de Estatística e Probabilidade, a predominância de modelos puramente teóricos pode resultar em uma lacuna pedagógica, dificultando a conexão entre a abstração conceitual e a aplicabilidade prática. A implementação de estratégias de avaliação autêntica, por meio de experimentos práticos que permitem aos estudantes a coleta de dados gerados pelos próprios alunos (SGD), mitiga essa desconexão ao transformar o aprendizado em um processo investigativo real. Segundo <span class="citation" data-cites="Conlon22092025">Conlon e Wilson (<a href="#ref-Conlon22092025" role="doc-biblioref">2025</a>)</span>, essa abordagem não apenas amplia o engajamento e a ‘propriedade psicológica’ sobre o conteúdo, mas também reduz a carga cognitiva ao permitir que os alunos utilizem sua intuição sobre o experimento para interpretar os resultados.</p>
+<p>Para esse modelo misto de aula teórica e prática, será utilizado um modelo de catapulta, um experimento clássico de física que pode ser facilmente adaptado para a coleta de dados para uso na disciplina de Estatística e Probabilidade. Através dos dados coletados, serão aplicados conceitos estudados, como média, variância, desvio padrão, gráficos e interpretação de resultados.</p>
 </section>
 <section id="objetivos" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="objetivos"><span class="header-section-number">2</span> Objetivos</h2>
@@ -322,7 +322,7 @@ Fac2p: Cumulative percentage frequency (above) </code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Código</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(tab)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(tab, <span class="at">main =</span> <span class="st">"Frequência dos lançamentos"</span>, <span class="at">xlab =</span> <span class="st">"Distância (cm)"</span>, <span class="at">ylab =</span> <span class="st">"Frequência"</span>, <span class="at">barcol =</span> <span class="st">"steelblue"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -332,58 +332,22 @@ Fac2p: Cumulative percentage frequency (above) </code></pre>
 </div>
 </div>
 </div>
-<p>Os valores de média, variância e desvio padrão calculados a partir dos dados coletados foram: - Média:</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Código</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>media <span class="ot">&lt;-</span> <span class="fu">mean</span>(dbrutos)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>media</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 288.9636</code></pre>
-</div>
-</div>
-<ul>
-<li>Variância:</li>
-</ul>
-<div class="cell">
-<details class="code-fold">
-<summary>Código</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>variancia <span class="ot">&lt;-</span> <span class="fu">var</span>(dbrutos)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>variancia</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 122.57</code></pre>
-</div>
-</div>
-<ul>
-<li>Desvio Padrão:</li>
-</ul>
-<div class="cell">
-<details class="code-fold">
-<summary>Código</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>desvio_padrao <span class="ot">&lt;-</span> <span class="fu">sd</span>(dbrutos)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>desvio_padrao</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 11.07114</code></pre>
-</div>
-</div>
+<p>Os resultados obtidos a partir dos dados coletados indicam que a média das distâncias alcançadas pelos lançamentos da catapulta foi de aproximadamente 288.96 cm, com uma variabilidade expressa pela variância de 122.57 cm² e um desvio padrão de 11.07 cm.</p>
 <ul>
 <li><p>Discussão dos resultados</p>
-<p>Os resultados obtidos a partir dos dados coletados indicam que a média das distâncias alcançadas pelos lançamentos da catapulta foi de aproximadamente 288.96 cm, com uma variabilidade expressa pela variância de 122.57 cm² e um desvio padrão de 11.07 cm.</p>
-<p>Estes valores sugerem que, embora a média seja um indicador do desempenho geral da catapulta, a variabilidade dos lançamentos é significativa, indicando que os resultados podem variar consideravelmente de um lançamento para outro. Existe um valor que está significativamente distante da média, o que pode ser considerado um outlier. A presença de outliers pode indicar a ocorrência de erros experimentais ou condições atípicas durante o lançamento.</p>
+<p>Estes valores sugerem que, embora a média seja um indicador do desempenho geral da catapulta, a variabilidade dos lançamentos é significativa, indicando que os resultados podem variar consideravelmente de um lançamento para outro.</p>
+<p>Existe um valor que está significativamente distante da média, o que pode ser considerado um outlier. A presença de outliers pode indicar a ocorrência de erros experimentais ou condições atípicas durante o lançamento.</p>
 <p>Se removido o valor discrepante de <span class="math inline">\(326.0\)</span> cm e recalculado tudo, os resultados são:</p></li>
 </ul>
 <div class="cell">
 <details class="code-fold">
 <summary>Código</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>dbrutos_sem_outlier <span class="ot">&lt;-</span> dbrutos[dbrutos <span class="sc">!=</span> <span class="fl">326.0</span>]</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>aux2 <span class="ot">&lt;-</span> <span class="fu">new_leem</span>(<span class="at">x =</span> <span class="fu">sort</span>(dbrutos_sem_outlier), <span class="at">variable =</span> <span class="dv">2</span>)</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>tab2 <span class="ot">&lt;-</span> <span class="fu">tabfreq</span>(aux2, <span class="at">k =</span> <span class="dv">3</span>)</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>tab2</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>dbrutos_sem_outlier <span class="ot">&lt;-</span> dbrutos[dbrutos <span class="sc">!=</span> <span class="fl">326.0</span>]</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>aux2 <span class="ot">&lt;-</span> <span class="fu">new_leem</span>(<span class="at">x =</span> <span class="fu">sort</span>(dbrutos_sem_outlier), <span class="at">variable =</span> <span class="dv">2</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>tab2 <span class="ot">&lt;-</span> <span class="fu">tabfreq</span>(aux2, <span class="at">k =</span> <span class="dv">3</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>tab2</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -408,12 +372,12 @@ Fac2p: Cumulative percentage frequency (above) </code></pre>
 </div>
 <details class="code-fold">
 <summary>Código</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(tab2)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(tab2, <span class="at">main =</span> <span class="st">"Frequência dos lançamentos (sem outlier)"</span>, <span class="at">xlab =</span> <span class="st">"Distância (cm)"</span>, <span class="at">ylab =</span> <span class="st">"Frequência"</span>, <span class="at">barcol =</span> <span class="st">"steelblue"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -894,183 +858,170 @@ CONLON, B.; WILSON, S. <a href="https://doi.org/10.1080/02602938.2025.2553894">E
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Código fonte</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Só mude aqui!!!!</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "João Delpasso"</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Relatório de Aula Prática 01"</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> referencias.bib</span></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co"># A partir daqui nao faca alteracoes!!!!!</span></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="an">link-citations:</span><span class="co"> true</span></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="an">csl:</span><span class="co"> associacao-brasileira-de-normas-tecnicas-ipea.csl</span></span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "&lt;a href='https://bendeivide.github.io/courses/epaec/' target='_blank'&gt;Estatística e Probabilidade&lt;/a&gt; &lt;/br&gt; &lt;a href='https://bendeivide.github.io' target='_blank'&gt;Prof. Ben Dêivide (DEFIM/CAP/UFSJ)&lt;/a&gt;"</span></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="an">include-before-body:</span><span class="co"> header.html</span></span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> now</span></span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="an">date-format:</span><span class="co"> "DD/MM/YYYY, HH:mm"</span></span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="an">lang:</span><span class="co"> pt-BR</span></span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="co">    number-sections: true</span></span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: bootstrap</span></span>
-<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="co">    #css: styles.css</span></span>
-<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
-<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
-<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="an">execute:</span></span>
-<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a><span class="co">  echo: true</span></span>
-<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a><span class="co">  warning: false</span></span>
-<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a><span class="co">  message: false</span></span>
-<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## Introdução</span></span>
-<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>No contexto do ensino de Estatística e Probabilidade, a predominância de modelos puramente teóricos pode resultar em uma lacuna pedagógica, dificultando a conexão entre a abstração conceitual e a aplicabilidade prática. A implementação de estratégias de avaliação autêntica, por meio de experimentos práticos que permitem aos estudantes a coleta de dados gerados pelos próprios alunos (SGD), mitiga essa desconexão ao transformar o aprendizado em um processo investigativo real. Segundo @Conlon22092025, essa abordagem não apenas amplia o engajamento e a 'propriedade psicológica' sobre o conteúdo, mas também reduz a carga cognitiva ao permitir que os alunos utilizem sua intuição sobre o experimento para dominar técnicas complexas de análise e inferência.</span>
-<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>Para esse modelo misto de aula teórica e prática, será utilizado um modelo de catapulta, um experimento clássico de física que pode ser facilmente adaptado para a coleta de dados para uso na disciplina de Estatística e Probabilidade. Através dos dados coletados, serão aplicados conceitos estudados, como média, variância, desvio padrão, gráficos e interpretação de resultados. Proporcionando uma experiência de aprendizado mais rica e significativa, onde os alunos possam ver a relevância dos conceitos estatísticos na análise de dados reais.</span>
-<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a><span class="fu">## Objetivos</span></span>
-<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a><span class="fu">### Objetivo geral</span></span>
-<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>Gerar dados experimentais a partir de um modelo de catapulta para aplicar conceitos de estatística descritiva e interpretação de resultados.</span>
-<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a><span class="fu">### Objetivos específicos</span></span>
-<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Coletar dados experimentais  </span>
-<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Aplicar estatística descritiva  </span>
-<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Construir gráficos  </span>
-<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Interpretar resultados  </span>
-<span id="cb15-48"><a href="#cb15-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-49"><a href="#cb15-49" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb15-50"><a href="#cb15-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-51"><a href="#cb15-51" aria-hidden="true" tabindex="-1"></a><span class="fu">## Fundamentação Teórica</span></span>
-<span id="cb15-52"><a href="#cb15-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-53"><a href="#cb15-53" aria-hidden="true" tabindex="-1"></a>Para a análise dos dados coletados será feito um estudo com base no livro de estatística, @EstaProb2024, serão aplicados os seguintes conceitos:</span>
-<span id="cb15-54"><a href="#cb15-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-55"><a href="#cb15-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Média</span>
-<span id="cb15-56"><a href="#cb15-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-57"><a href="#cb15-57" aria-hidden="true" tabindex="-1"></a>  Valor que representa o centro de um conjunto de dados, calculado pela soma dos valores dividida pelo número de observações. A média é sensível a valores extremos (outliers) e pode não representar adequadamente a tendência central em distribuições assimétricas.</span>
-<span id="cb15-58"><a href="#cb15-58" aria-hidden="true" tabindex="-1"></a>  A média é calculada pela equação:</span>
-<span id="cb15-59"><a href="#cb15-59" aria-hidden="true" tabindex="-1"></a>  $$\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i$${#eq-media}</span>
-<span id="cb15-60"><a href="#cb15-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-61"><a href="#cb15-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Variância</span>
-<span id="cb15-62"><a href="#cb15-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-63"><a href="#cb15-63" aria-hidden="true" tabindex="-1"></a>  Essa medida indica o grau de dispersão dos dados em relação à média, ou seja o quanto os valores se afastam da média. A variância pode ser calculada com:</span>
-<span id="cb15-64"><a href="#cb15-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-65"><a href="#cb15-65" aria-hidden="true" tabindex="-1"></a>  $$s^2 = \frac{1}{n-1}\sum_{i=1}^{n} (x_i - \bar{x})^2$${#eq-variancia}</span>
-<span id="cb15-66"><a href="#cb15-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-67"><a href="#cb15-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Desvio padrão</span>
-<span id="cb15-68"><a href="#cb15-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-69"><a href="#cb15-69" aria-hidden="true" tabindex="-1"></a>  Para facilitar a interpretação da variabilidade dos dados, o desvio padrão é utilizado, sendo a raiz quadrada da variância. Ele é expresso na mesma unidade dos dados originais, o que facilita a compreensão da dispersão em relação à média. O desvio padrão é calculado por:</span>
-<span id="cb15-70"><a href="#cb15-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-71"><a href="#cb15-71" aria-hidden="true" tabindex="-1"></a>$$s = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n} (x_i - \bar{x})^2}$${#eq-desvio-padrao}</span>
-<span id="cb15-72"><a href="#cb15-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-73"><a href="#cb15-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Amostragem</span>
-<span id="cb15-74"><a href="#cb15-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-75"><a href="#cb15-75" aria-hidden="true" tabindex="-1"></a>  A amostragem é o processo de selecionar um subconjunto representativo de uma população para análise. Existem diferentes métodos de amostragem, como a amostragem aleatória simples, estratificada e sistemática, cada um com suas vantagens e desvantagens. A escolha do método de amostragem pode influenciar a validade dos resultados e a generalização das conclusões.</span>
-<span id="cb15-76"><a href="#cb15-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-77"><a href="#cb15-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-78"><a href="#cb15-78" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb15-79"><a href="#cb15-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-80"><a href="#cb15-80" aria-hidden="true" tabindex="-1"></a><span class="fu">## Metodologia</span></span>
-<span id="cb15-81"><a href="#cb15-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-82"><a href="#cb15-82" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Materiais utilizados:</span>
-<span id="cb15-83"><a href="#cb15-83" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Catapulta configurável</span>
-<span id="cb15-84"><a href="#cb15-84" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Bola de pingue-pongue</span>
-<span id="cb15-85"><a href="#cb15-85" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Fita métrica</span>
-<span id="cb15-86"><a href="#cb15-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-87"><a href="#cb15-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Procedimento:</span>
-<span id="cb15-88"><a href="#cb15-88" aria-hidden="true" tabindex="-1"></a><span class="ss">  1. </span>Configuração inicial da catapulta, ajustando a altura do cesto (O-), o ângulo máximo de lançamento(B+), fixação do elástico no braço(A+) e a fixação do elástico na base(A-).</span>
-<span id="cb15-89"><a href="#cb15-89" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>No experimento realizado, a configuração utilizada foi: O- = nível 2, B+ = 90°, A+ = nível 3 e A- = nível 4.</span>
-<span id="cb15-90"><a href="#cb15-90" aria-hidden="true" tabindex="-1"></a><span class="ss">  2. </span>Fixação da catapulta em uma superfície estável para garantir a consistência dos lançamentos.</span>
-<span id="cb15-91"><a href="#cb15-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-92"><a href="#cb15-92" aria-hidden="true" tabindex="-1"></a><span class="ss">  3. </span>Realização de $n$ lançamentos, mensurando a distância em que o projetil atinge o chão.</span>
-<span id="cb15-93"><a href="#cb15-93" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>No experimento em sala de aula com todos estudantes presentes, foram realizados $n = 22$ lançamentos.</span>
-<span id="cb15-94"><a href="#cb15-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-95"><a href="#cb15-95" aria-hidden="true" tabindex="-1"></a><span class="ss">  4. </span>Registro dos dados coletados em uma tabela.</span>
-<span id="cb15-96"><a href="#cb15-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-97"><a href="#cb15-97" aria-hidden="true" tabindex="-1"></a><span class="ss">  5. </span>Análise e interpretação dos dados utilizando os conceitos de estatística.</span>
-<span id="cb15-98"><a href="#cb15-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-99"><a href="#cb15-99" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb15-100"><a href="#cb15-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-101"><a href="#cb15-101" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resultados e Discussão</span></span>
-<span id="cb15-102"><a href="#cb15-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-103"><a href="#cb15-103" aria-hidden="true" tabindex="-1"></a>Após a coleta dos dados, foram obtidos os seguintes resultados (em cm):</span>
-<span id="cb15-104"><a href="#cb15-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-107"><a href="#cb15-107" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb15-108"><a href="#cb15-108" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leem)</span>
-<span id="cb15-109"><a href="#cb15-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-110"><a href="#cb15-110" aria-hidden="true" tabindex="-1"></a>ap01 <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(<span class="st">"ap01.csv"</span>)</span>
-<span id="cb15-111"><a href="#cb15-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-112"><a href="#cb15-112" aria-hidden="true" tabindex="-1"></a>dbrutos <span class="ot">&lt;-</span> ap01<span class="sc">$</span>dist</span>
-<span id="cb15-113"><a href="#cb15-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-114"><a href="#cb15-114" aria-hidden="true" tabindex="-1"></a>drol <span class="ot">&lt;-</span> <span class="fu">sort</span>(dbrutos)</span>
-<span id="cb15-115"><a href="#cb15-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-116"><a href="#cb15-116" aria-hidden="true" tabindex="-1"></a>aux <span class="ot">&lt;-</span> <span class="fu">new_leem</span>(<span class="at">x =</span> drol, <span class="at">variable =</span> <span class="dv">2</span>)</span>
-<span id="cb15-117"><a href="#cb15-117" aria-hidden="true" tabindex="-1"></a>aux</span>
-<span id="cb15-118"><a href="#cb15-118" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb15-119"><a href="#cb15-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-120"><a href="#cb15-120" aria-hidden="true" tabindex="-1"></a>Utilizando o pacote <span class="in">`leem`</span> que integra as equações, @eq-media, @eq-variancia e @eq-desvio-padrao, no R, os dados podem ser facilmente organizados e analisados:</span>
-<span id="cb15-121"><a href="#cb15-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-124"><a href="#cb15-124" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb15-125"><a href="#cb15-125" aria-hidden="true" tabindex="-1"></a>tab <span class="ot">&lt;-</span> <span class="fu">tabfreq</span>(aux, <span class="at">k =</span> <span class="dv">3</span>)</span>
-<span id="cb15-126"><a href="#cb15-126" aria-hidden="true" tabindex="-1"></a>tab</span>
-<span id="cb15-127"><a href="#cb15-127" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb15-128"><a href="#cb15-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-129"><a href="#cb15-129" aria-hidden="true" tabindex="-1"></a>Os dados também podem ser visualizados graficamente:</span>
-<span id="cb15-132"><a href="#cb15-132" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb15-133"><a href="#cb15-133" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(tab)</span>
-<span id="cb15-134"><a href="#cb15-134" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb15-135"><a href="#cb15-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-136"><a href="#cb15-136" aria-hidden="true" tabindex="-1"></a>Os valores de média, variância e desvio padrão calculados a partir dos dados coletados foram:</span>
-<span id="cb15-137"><a href="#cb15-137" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Média:</span>
-<span id="cb15-140"><a href="#cb15-140" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb15-141"><a href="#cb15-141" aria-hidden="true" tabindex="-1"></a>media <span class="ot">&lt;-</span> <span class="fu">mean</span>(dbrutos)</span>
-<span id="cb15-142"><a href="#cb15-142" aria-hidden="true" tabindex="-1"></a>media</span>
-<span id="cb15-143"><a href="#cb15-143" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb15-144"><a href="#cb15-144" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Variância:</span>
-<span id="cb15-147"><a href="#cb15-147" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb15-148"><a href="#cb15-148" aria-hidden="true" tabindex="-1"></a>variancia <span class="ot">&lt;-</span> <span class="fu">var</span>(dbrutos)</span>
-<span id="cb15-149"><a href="#cb15-149" aria-hidden="true" tabindex="-1"></a>variancia</span>
-<span id="cb15-150"><a href="#cb15-150" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb15-151"><a href="#cb15-151" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Desvio Padrão:</span>
-<span id="cb15-154"><a href="#cb15-154" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb15-155"><a href="#cb15-155" aria-hidden="true" tabindex="-1"></a>desvio_padrao <span class="ot">&lt;-</span> <span class="fu">sd</span>(dbrutos)</span>
-<span id="cb15-156"><a href="#cb15-156" aria-hidden="true" tabindex="-1"></a>desvio_padrao</span>
-<span id="cb15-157"><a href="#cb15-157" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb15-158"><a href="#cb15-158" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-159"><a href="#cb15-159" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Discussão dos resultados</span>
-<span id="cb15-160"><a href="#cb15-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-161"><a href="#cb15-161" aria-hidden="true" tabindex="-1"></a>  Os resultados obtidos a partir dos dados coletados indicam que a média das distâncias alcançadas pelos lançamentos da catapulta foi de aproximadamente <span class="in">`r round(media, 2)`</span> cm, com uma variabilidade expressa pela variância de <span class="in">`r round(variancia, 2)`</span> cm² e um desvio padrão de <span class="in">`r round(desvio_padrao, 2)`</span> cm.</span>
-<span id="cb15-162"><a href="#cb15-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-163"><a href="#cb15-163" aria-hidden="true" tabindex="-1"></a>  Estes valores sugerem que, embora a média seja um indicador do desempenho geral da catapulta, a variabilidade dos lançamentos é significativa, indicando que os resultados podem variar consideravelmente de um lançamento para outro. Existe um valor que está significativamente distante da média, o que pode ser considerado um outlier. A presença de outliers pode indicar a ocorrência de erros experimentais ou condições atípicas durante o lançamento.</span>
-<span id="cb15-164"><a href="#cb15-164" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-165"><a href="#cb15-165" aria-hidden="true" tabindex="-1"></a>  Se removido o valor discrepante de $326.0$ cm e recalculado tudo, os resultados são:</span>
-<span id="cb15-166"><a href="#cb15-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-169"><a href="#cb15-169" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb15-170"><a href="#cb15-170" aria-hidden="true" tabindex="-1"></a>dbrutos_sem_outlier <span class="ot">&lt;-</span> dbrutos[dbrutos <span class="sc">!=</span> <span class="fl">326.0</span>]</span>
-<span id="cb15-171"><a href="#cb15-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-172"><a href="#cb15-172" aria-hidden="true" tabindex="-1"></a>aux2 <span class="ot">&lt;-</span> <span class="fu">new_leem</span>(<span class="at">x =</span> <span class="fu">sort</span>(dbrutos_sem_outlier), <span class="at">variable =</span> <span class="dv">2</span>)</span>
-<span id="cb15-173"><a href="#cb15-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-174"><a href="#cb15-174" aria-hidden="true" tabindex="-1"></a>tab2 <span class="ot">&lt;-</span> <span class="fu">tabfreq</span>(aux2, <span class="at">k =</span> <span class="dv">3</span>)</span>
-<span id="cb15-175"><a href="#cb15-175" aria-hidden="true" tabindex="-1"></a>tab2</span>
-<span id="cb15-176"><a href="#cb15-176" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(tab2)</span>
-<span id="cb15-177"><a href="#cb15-177" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb15-178"><a href="#cb15-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-179"><a href="#cb15-179" aria-hidden="true" tabindex="-1"></a>Com a remoção do outlier, a média diminui para <span class="in">`r round(mean(dbrutos_sem_outlier), 2)`</span> cm, a variância reduz para <span class="in">`r round(var(dbrutos_sem_outlier), 2)`</span> cm² e o desvio padrão cai para <span class="in">`r round(sd(dbrutos_sem_outlier), 2)`</span> cm. Isso indica que o outlier tinha um impacto significativo na análise dos dados, distorcendo a percepção do desempenho da catapulta.</span>
-<span id="cb15-180"><a href="#cb15-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-181"><a href="#cb15-181" aria-hidden="true" tabindex="-1"></a>Os histogramas ajudam a visualizar a distribuição dos dados, mostrando que a maioria dos lançamentos se concentra em torno da média, mas a presença do outlier cria uma cauda longa à direita, indicando que houve um lançamento excepcionalmente distante.</span>
-<span id="cb15-182"><a href="#cb15-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-183"><a href="#cb15-183" aria-hidden="true" tabindex="-1"></a><span class="fu">## Considerações finais</span></span>
-<span id="cb15-184"><a href="#cb15-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-185"><a href="#cb15-185" aria-hidden="true" tabindex="-1"></a>O experimento realizado com a catapulta permitiu a aplicação prática dos conceitos de estatística descritiva, como média, variância e desvio padrão, a partir dos dados coletados. A análise dos resultados revelou a presença de um outlier que influenciou significativamente as medidas de tendência central e dispersão, destacando a importância de identificar e lidar com valores atípicos em conjuntos de dados.</span>
-<span id="cb15-186"><a href="#cb15-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-187"><a href="#cb15-187" aria-hidden="true" tabindex="-1"></a>Este valor discrepante pode ter sido resultado de um erro experimental, como um lançamento mal executado ou uma falha na medição, o que ressalta a necessidade de rigor e atenção durante a coleta de dados. A remoção do outlier proporcionou uma visão mais precisa do desempenho da catapulta, evidenciando a importância de considerar a qualidade dos dados ao interpretar os resultados.</span>
-<span id="cb15-188"><a href="#cb15-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-189"><a href="#cb15-189" aria-hidden="true" tabindex="-1"></a>Uma análise física do modelo da catapulta poderia também junto aos dados coletados, fornecer variáveis físicas do modelo, como a força de lançamento, altura máxima e vários outros parametros, o que poderia enriquecer ainda mais a análise dos dados e a compreensão do experimento, permitindo uma abordagem mais interdisciplinar entre física e estatística.</span>
-<span id="cb15-190"><a href="#cb15-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-191"><a href="#cb15-191" aria-hidden="true" tabindex="-1"></a><span class="fu">## Referências</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Só mude aqui!!!!</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "João Delpasso"</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Relatório de Aula Prática 01"</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> referencias.bib</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co"># A partir daqui nao faca alteracoes!!!!!</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="an">link-citations:</span><span class="co"> true</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="an">csl:</span><span class="co"> associacao-brasileira-de-normas-tecnicas-ipea.csl</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "&lt;a href='https://bendeivide.github.io/courses/epaec/' target='_blank'&gt;Estatística e Probabilidade&lt;/a&gt; &lt;/br&gt; &lt;a href='https://bendeivide.github.io' target='_blank'&gt;Prof. Ben Dêivide (DEFIM/CAP/UFSJ)&lt;/a&gt;"</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="an">include-before-body:</span><span class="co"> header.html</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> now</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="an">date-format:</span><span class="co"> "DD/MM/YYYY, HH:mm"</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="an">lang:</span><span class="co"> pt-BR</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="co">    number-sections: true</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: bootstrap</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="co">    #css: styles.css</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="an">execute:</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="co">  echo: true</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="co">  warning: false</span></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="co">  message: false</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## Introdução</span></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>No contexto do ensino de Estatística e Probabilidade, a predominância de modelos puramente teóricos pode resultar em uma lacuna pedagógica, dificultando a conexão entre a abstração conceitual e a aplicabilidade prática. A implementação de estratégias de avaliação autêntica, por meio de experimentos práticos que permitem aos estudantes a coleta de dados gerados pelos próprios alunos (SGD), mitiga essa desconexão ao transformar o aprendizado em um processo investigativo real. Segundo @Conlon22092025, essa abordagem não apenas amplia o engajamento e a 'propriedade psicológica' sobre o conteúdo, mas também reduz a carga cognitiva ao permitir que os alunos utilizem sua intuição sobre o experimento para interpretar os resultados.</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>Para esse modelo misto de aula teórica e prática, será utilizado um modelo de catapulta, um experimento clássico de física que pode ser facilmente adaptado para a coleta de dados para uso na disciplina de Estatística e Probabilidade. Através dos dados coletados, serão aplicados conceitos estudados, como média, variância, desvio padrão, gráficos e interpretação de resultados.</span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a><span class="fu">## Objetivos</span></span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a><span class="fu">### Objetivo geral</span></span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>Gerar dados experimentais a partir de um modelo de catapulta para aplicar conceitos de estatística descritiva e interpretação de resultados.</span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a><span class="fu">### Objetivos específicos</span></span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Coletar dados experimentais  </span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Aplicar estatística descritiva  </span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Construir gráficos  </span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Interpretar resultados  </span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a><span class="fu">## Fundamentação Teórica</span></span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a>Para a análise dos dados coletados será feito um estudo com base no livro de estatística, @EstaProb2024, serão aplicados os seguintes conceitos:</span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Média</span>
+<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a>  Valor que representa o centro de um conjunto de dados, calculado pela soma dos valores dividida pelo número de observações. A média é sensível a valores extremos (outliers) e pode não representar adequadamente a tendência central em distribuições assimétricas.</span>
+<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a>  A média é calculada pela equação:</span>
+<span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a>  $$\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i$${#eq-media}</span>
+<span id="cb9-60"><a href="#cb9-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-61"><a href="#cb9-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Variância</span>
+<span id="cb9-62"><a href="#cb9-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-63"><a href="#cb9-63" aria-hidden="true" tabindex="-1"></a>  Essa medida indica o grau de dispersão dos dados em relação à média, ou seja o quanto os valores se afastam da média. A variância pode ser calculada com:</span>
+<span id="cb9-64"><a href="#cb9-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-65"><a href="#cb9-65" aria-hidden="true" tabindex="-1"></a>  $$s^2 = \frac{1}{n-1}\sum_{i=1}^{n} (x_i - \bar{x})^2$${#eq-variancia}</span>
+<span id="cb9-66"><a href="#cb9-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-67"><a href="#cb9-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Desvio padrão</span>
+<span id="cb9-68"><a href="#cb9-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-69"><a href="#cb9-69" aria-hidden="true" tabindex="-1"></a>  Para facilitar a interpretação da variabilidade dos dados, o desvio padrão é utilizado, sendo a raiz quadrada da variância. Ele é expresso na mesma unidade dos dados originais, o que facilita a compreensão da dispersão em relação à média. O desvio padrão é calculado por:</span>
+<span id="cb9-70"><a href="#cb9-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-71"><a href="#cb9-71" aria-hidden="true" tabindex="-1"></a>$$s = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n} (x_i - \bar{x})^2}$${#eq-desvio-padrao}</span>
+<span id="cb9-72"><a href="#cb9-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-73"><a href="#cb9-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Amostragem</span>
+<span id="cb9-74"><a href="#cb9-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-75"><a href="#cb9-75" aria-hidden="true" tabindex="-1"></a>  A amostragem é o processo de selecionar um subconjunto representativo de uma população para análise. Existem diferentes métodos de amostragem, como a amostragem aleatória simples, estratificada e sistemática, cada um com suas vantagens e desvantagens. A escolha do método de amostragem pode influenciar a validade dos resultados e a generalização das conclusões.</span>
+<span id="cb9-76"><a href="#cb9-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-77"><a href="#cb9-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-78"><a href="#cb9-78" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb9-79"><a href="#cb9-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-80"><a href="#cb9-80" aria-hidden="true" tabindex="-1"></a><span class="fu">## Metodologia</span></span>
+<span id="cb9-81"><a href="#cb9-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-82"><a href="#cb9-82" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Materiais utilizados:</span>
+<span id="cb9-83"><a href="#cb9-83" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Catapulta configurável</span>
+<span id="cb9-84"><a href="#cb9-84" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Bola de pingue-pongue</span>
+<span id="cb9-85"><a href="#cb9-85" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Fita métrica</span>
+<span id="cb9-86"><a href="#cb9-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-87"><a href="#cb9-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Procedimento:</span>
+<span id="cb9-88"><a href="#cb9-88" aria-hidden="true" tabindex="-1"></a><span class="ss">  1. </span>Configuração inicial da catapulta, ajustando a altura do cesto (O-), o ângulo máximo de lançamento(B+), fixação do elástico no braço(A+) e a fixação do elástico na base(A-).</span>
+<span id="cb9-89"><a href="#cb9-89" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>No experimento realizado, a configuração utilizada foi: O- = nível 2, B+ = 90°, A+ = nível 3 e A- = nível 4.</span>
+<span id="cb9-90"><a href="#cb9-90" aria-hidden="true" tabindex="-1"></a><span class="ss">  2. </span>Fixação da catapulta em uma superfície estável para garantir a consistência dos lançamentos.</span>
+<span id="cb9-91"><a href="#cb9-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-92"><a href="#cb9-92" aria-hidden="true" tabindex="-1"></a><span class="ss">  3. </span>Realização de $n$ lançamentos, mensurando a distância em que o projetil atinge o chão.</span>
+<span id="cb9-93"><a href="#cb9-93" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>No experimento em sala de aula com todos estudantes presentes, foram realizados $n = 22$ lançamentos.</span>
+<span id="cb9-94"><a href="#cb9-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-95"><a href="#cb9-95" aria-hidden="true" tabindex="-1"></a><span class="ss">  4. </span>Registro dos dados coletados em uma tabela.</span>
+<span id="cb9-96"><a href="#cb9-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-97"><a href="#cb9-97" aria-hidden="true" tabindex="-1"></a><span class="ss">  5. </span>Análise e interpretação dos dados utilizando os conceitos de estatística.</span>
+<span id="cb9-98"><a href="#cb9-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-99"><a href="#cb9-99" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb9-100"><a href="#cb9-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-101"><a href="#cb9-101" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resultados e Discussão</span></span>
+<span id="cb9-102"><a href="#cb9-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-103"><a href="#cb9-103" aria-hidden="true" tabindex="-1"></a>Após a coleta dos dados, foram obtidos os seguintes resultados (em cm):</span>
+<span id="cb9-104"><a href="#cb9-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-107"><a href="#cb9-107" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb9-108"><a href="#cb9-108" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leem)</span>
+<span id="cb9-109"><a href="#cb9-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-110"><a href="#cb9-110" aria-hidden="true" tabindex="-1"></a>ap01 <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(<span class="st">"ap01.csv"</span>)</span>
+<span id="cb9-111"><a href="#cb9-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-112"><a href="#cb9-112" aria-hidden="true" tabindex="-1"></a>dbrutos <span class="ot">&lt;-</span> ap01<span class="sc">$</span>dist</span>
+<span id="cb9-113"><a href="#cb9-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-114"><a href="#cb9-114" aria-hidden="true" tabindex="-1"></a>drol <span class="ot">&lt;-</span> <span class="fu">sort</span>(dbrutos)</span>
+<span id="cb9-115"><a href="#cb9-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-116"><a href="#cb9-116" aria-hidden="true" tabindex="-1"></a>aux <span class="ot">&lt;-</span> <span class="fu">new_leem</span>(<span class="at">x =</span> drol, <span class="at">variable =</span> <span class="dv">2</span>)</span>
+<span id="cb9-117"><a href="#cb9-117" aria-hidden="true" tabindex="-1"></a>aux</span>
+<span id="cb9-118"><a href="#cb9-118" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-119"><a href="#cb9-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-120"><a href="#cb9-120" aria-hidden="true" tabindex="-1"></a>Utilizando o pacote <span class="in">`leem`</span> que integra as equações, @eq-media, @eq-variancia e @eq-desvio-padrao, no R, os dados podem ser facilmente organizados e analisados:</span>
+<span id="cb9-121"><a href="#cb9-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-124"><a href="#cb9-124" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb9-125"><a href="#cb9-125" aria-hidden="true" tabindex="-1"></a>tab <span class="ot">&lt;-</span> <span class="fu">tabfreq</span>(aux, <span class="at">k =</span> <span class="dv">3</span>)</span>
+<span id="cb9-126"><a href="#cb9-126" aria-hidden="true" tabindex="-1"></a>tab</span>
+<span id="cb9-127"><a href="#cb9-127" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-128"><a href="#cb9-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-129"><a href="#cb9-129" aria-hidden="true" tabindex="-1"></a>Os dados também podem ser visualizados graficamente:</span>
+<span id="cb9-132"><a href="#cb9-132" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb9-133"><a href="#cb9-133" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(tab, <span class="at">main =</span> <span class="st">"Frequência dos lançamentos"</span>, <span class="at">xlab =</span> <span class="st">"Distância (cm)"</span>, <span class="at">ylab =</span> <span class="st">"Frequência"</span>, <span class="at">barcol =</span> <span class="st">"steelblue"</span>)</span>
+<span id="cb9-134"><a href="#cb9-134" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-135"><a href="#cb9-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-136"><a href="#cb9-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-137"><a href="#cb9-137" aria-hidden="true" tabindex="-1"></a>  Os resultados obtidos a partir dos dados coletados indicam que a média das distâncias alcançadas pelos lançamentos da catapulta foi de aproximadamente <span class="in">`r round( mean(dbrutos), 2)`</span> cm, com uma variabilidade expressa pela variância de <span class="in">`r round(var(dbrutos), 2)`</span> cm² e um desvio padrão de <span class="in">`r round(sd(dbrutos), 2)`</span> cm.</span>
+<span id="cb9-138"><a href="#cb9-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-139"><a href="#cb9-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-140"><a href="#cb9-140" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Discussão dos resultados</span>
+<span id="cb9-141"><a href="#cb9-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-142"><a href="#cb9-142" aria-hidden="true" tabindex="-1"></a>  Estes valores sugerem que, embora a média seja um indicador do desempenho geral da catapulta, a variabilidade dos lançamentos é significativa, indicando que os resultados podem variar consideravelmente de um lançamento para outro. </span>
+<span id="cb9-143"><a href="#cb9-143" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-144"><a href="#cb9-144" aria-hidden="true" tabindex="-1"></a>  Existe um valor que está significativamente distante da média, o que pode ser considerado um outlier. A presença de outliers pode indicar a ocorrência de erros experimentais ou condições atípicas durante o lançamento.</span>
+<span id="cb9-145"><a href="#cb9-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-146"><a href="#cb9-146" aria-hidden="true" tabindex="-1"></a>  Se removido o valor discrepante de $326.0$ cm e recalculado tudo, os resultados são:</span>
+<span id="cb9-147"><a href="#cb9-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-150"><a href="#cb9-150" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb9-151"><a href="#cb9-151" aria-hidden="true" tabindex="-1"></a>dbrutos_sem_outlier <span class="ot">&lt;-</span> dbrutos[dbrutos <span class="sc">!=</span> <span class="fl">326.0</span>]</span>
+<span id="cb9-152"><a href="#cb9-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-153"><a href="#cb9-153" aria-hidden="true" tabindex="-1"></a>aux2 <span class="ot">&lt;-</span> <span class="fu">new_leem</span>(<span class="at">x =</span> <span class="fu">sort</span>(dbrutos_sem_outlier), <span class="at">variable =</span> <span class="dv">2</span>)</span>
+<span id="cb9-154"><a href="#cb9-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-155"><a href="#cb9-155" aria-hidden="true" tabindex="-1"></a>tab2 <span class="ot">&lt;-</span> <span class="fu">tabfreq</span>(aux2, <span class="at">k =</span> <span class="dv">3</span>)</span>
+<span id="cb9-156"><a href="#cb9-156" aria-hidden="true" tabindex="-1"></a>tab2</span>
+<span id="cb9-157"><a href="#cb9-157" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(tab2, <span class="at">main =</span> <span class="st">"Frequência dos lançamentos (sem outlier)"</span>, <span class="at">xlab =</span> <span class="st">"Distância (cm)"</span>, <span class="at">ylab =</span> <span class="st">"Frequência"</span>, <span class="at">barcol =</span> <span class="st">"steelblue"</span>)</span>
+<span id="cb9-158"><a href="#cb9-158" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-159"><a href="#cb9-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-160"><a href="#cb9-160" aria-hidden="true" tabindex="-1"></a>Com a remoção do outlier, a média diminui para <span class="in">`r round(mean(dbrutos_sem_outlier), 2)`</span> cm, a variância reduz para <span class="in">`r round(var(dbrutos_sem_outlier), 2)`</span> cm² e o desvio padrão cai para <span class="in">`r round(sd(dbrutos_sem_outlier), 2)`</span> cm. Isso indica que o outlier tinha um impacto significativo na análise dos dados, distorcendo a percepção do desempenho da catapulta.</span>
+<span id="cb9-161"><a href="#cb9-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-162"><a href="#cb9-162" aria-hidden="true" tabindex="-1"></a>Os histogramas ajudam a visualizar a distribuição dos dados, mostrando que a maioria dos lançamentos se concentra em torno da média, mas a presença do outlier cria uma cauda longa à direita, indicando que houve um lançamento excepcionalmente distante.</span>
+<span id="cb9-163"><a href="#cb9-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-164"><a href="#cb9-164" aria-hidden="true" tabindex="-1"></a><span class="fu">## Considerações finais</span></span>
+<span id="cb9-165"><a href="#cb9-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-166"><a href="#cb9-166" aria-hidden="true" tabindex="-1"></a>O experimento realizado com a catapulta permitiu a aplicação prática dos conceitos de estatística descritiva, como média, variância e desvio padrão, a partir dos dados coletados. A análise dos resultados revelou a presença de um outlier que influenciou significativamente as medidas de tendência central e dispersão, destacando a importância de identificar e lidar com valores atípicos em conjuntos de dados.</span>
+<span id="cb9-167"><a href="#cb9-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-168"><a href="#cb9-168" aria-hidden="true" tabindex="-1"></a>Este valor discrepante pode ter sido resultado de um erro experimental, como um lançamento mal executado ou uma falha na medição, o que ressalta a necessidade de rigor e atenção durante a coleta de dados. A remoção do outlier proporcionou uma visão mais precisa do desempenho da catapulta, evidenciando a importância de considerar a qualidade dos dados ao interpretar os resultados.</span>
+<span id="cb9-169"><a href="#cb9-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-170"><a href="#cb9-170" aria-hidden="true" tabindex="-1"></a>Uma análise física do modelo da catapulta poderia também junto aos dados coletados, fornecer variáveis físicas do modelo, como a força de lançamento, altura máxima e vários outros parametros, o que poderia enriquecer ainda mais a análise dos dados e a compreensão do experimento, permitindo uma abordagem mais interdisciplinar entre física e estatística.</span>
+<span id="cb9-171"><a href="#cb9-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-172"><a href="#cb9-172" aria-hidden="true" tabindex="-1"></a><span class="fu">## Referências</span></span>
 </code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

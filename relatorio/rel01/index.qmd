@@ -28,9 +28,9 @@ execute:
 
 ## Introdução
 
-No contexto do ensino de Estatística e Probabilidade, a predominância de modelos puramente teóricos pode resultar em uma lacuna pedagógica, dificultando a conexão entre a abstração conceitual e a aplicabilidade prática. A implementação de estratégias de avaliação autêntica, por meio de experimentos práticos que permitem aos estudantes a coleta de dados gerados pelos próprios alunos (SGD), mitiga essa desconexão ao transformar o aprendizado em um processo investigativo real. Segundo @Conlon22092025, essa abordagem não apenas amplia o engajamento e a 'propriedade psicológica' sobre o conteúdo, mas também reduz a carga cognitiva ao permitir que os alunos utilizem sua intuição sobre o experimento para dominar técnicas complexas de análise e inferência.
+No contexto do ensino de Estatística e Probabilidade, a predominância de modelos puramente teóricos pode resultar em uma lacuna pedagógica, dificultando a conexão entre a abstração conceitual e a aplicabilidade prática. A implementação de estratégias de avaliação autêntica, por meio de experimentos práticos que permitem aos estudantes a coleta de dados gerados pelos próprios alunos (SGD), mitiga essa desconexão ao transformar o aprendizado em um processo investigativo real. Segundo @Conlon22092025, essa abordagem não apenas amplia o engajamento e a 'propriedade psicológica' sobre o conteúdo, mas também reduz a carga cognitiva ao permitir que os alunos utilizem sua intuição sobre o experimento para interpretar os resultados.
 
-Para esse modelo misto de aula teórica e prática, será utilizado um modelo de catapulta, um experimento clássico de física que pode ser facilmente adaptado para a coleta de dados para uso na disciplina de Estatística e Probabilidade. Através dos dados coletados, serão aplicados conceitos estudados, como média, variância, desvio padrão, gráficos e interpretação de resultados. Proporcionando uma experiência de aprendizado mais rica e significativa, onde os alunos possam ver a relevância dos conceitos estatísticos na análise de dados reais.
+Para esse modelo misto de aula teórica e prática, será utilizado um modelo de catapulta, um experimento clássico de física que pode ser facilmente adaptado para a coleta de dados para uso na disciplina de Estatística e Probabilidade. Através dos dados coletados, serão aplicados conceitos estudados, como média, variância, desvio padrão, gráficos e interpretação de resultados.
 
 
 ## Objetivos
@@ -124,31 +124,18 @@ tab
 
 Os dados também podem ser visualizados graficamente:
 ```{r}
-barplot(tab)
+barplot(tab, main = "Frequência dos lançamentos", xlab = "Distância (cm)", ylab = "Frequência", barcol = "steelblue")
 ```
 
-Os valores de média, variância e desvio padrão calculados a partir dos dados coletados foram:
-- Média:
-```{r}
-media <- mean(dbrutos)
-media
-```
-- Variância:
-```{r}
-variancia <- var(dbrutos)
-variancia
-```
-- Desvio Padrão:
-```{r}
-desvio_padrao <- sd(dbrutos)
-desvio_padrao
-```
+
+  Os resultados obtidos a partir dos dados coletados indicam que a média das distâncias alcançadas pelos lançamentos da catapulta foi de aproximadamente `r round( mean(dbrutos), 2)` cm, com uma variabilidade expressa pela variância de `r round(var(dbrutos), 2)` cm² e um desvio padrão de `r round(sd(dbrutos), 2)` cm.
+
 
 - Discussão dos resultados
 
-  Os resultados obtidos a partir dos dados coletados indicam que a média das distâncias alcançadas pelos lançamentos da catapulta foi de aproximadamente `r round(media, 2)` cm, com uma variabilidade expressa pela variância de `r round(variancia, 2)` cm² e um desvio padrão de `r round(desvio_padrao, 2)` cm.
-
-  Estes valores sugerem que, embora a média seja um indicador do desempenho geral da catapulta, a variabilidade dos lançamentos é significativa, indicando que os resultados podem variar consideravelmente de um lançamento para outro. Existe um valor que está significativamente distante da média, o que pode ser considerado um outlier. A presença de outliers pode indicar a ocorrência de erros experimentais ou condições atípicas durante o lançamento.
+  Estes valores sugerem que, embora a média seja um indicador do desempenho geral da catapulta, a variabilidade dos lançamentos é significativa, indicando que os resultados podem variar consideravelmente de um lançamento para outro. 
+  
+  Existe um valor que está significativamente distante da média, o que pode ser considerado um outlier. A presença de outliers pode indicar a ocorrência de erros experimentais ou condições atípicas durante o lançamento.
 
   Se removido o valor discrepante de $326.0$ cm e recalculado tudo, os resultados são:
 
@@ -159,7 +146,7 @@ aux2 <- new_leem(x = sort(dbrutos_sem_outlier), variable = 2)
 
 tab2 <- tabfreq(aux2, k = 3)
 tab2
-barplot(tab2)
+barplot(tab2, main = "Frequência dos lançamentos (sem outlier)", xlab = "Distância (cm)", ylab = "Frequência", barcol = "steelblue")
 ```
 
 Com a remoção do outlier, a média diminui para `r round(mean(dbrutos_sem_outlier), 2)` cm, a variância reduz para `r round(var(dbrutos_sem_outlier), 2)` cm² e o desvio padrão cai para `r round(sd(dbrutos_sem_outlier), 2)` cm. Isso indica que o outlier tinha um impacto significativo na análise dos dados, distorcendo a percepção do desempenho da catapulta.
